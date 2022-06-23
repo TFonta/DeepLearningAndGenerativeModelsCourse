@@ -1,6 +1,8 @@
-# DeepLearningAndGenerativeModelsCourse
+# Deep Learning And Generative Models Course
 
-## Create Anaconda Environment
+## Setting up Pytorch environment
+
+### Create Anaconda Environment
 
 - Download Miniconda from https://docs.conda.io/en/latest/miniconda.html
 - Remember to select "add to PATH" when installing 
@@ -28,7 +30,7 @@ GPU
 conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 ```
 
-## Setting up VS code
+### Setting up VS code
 
 - Install VS code from https://code.visualstudio.com/
 - Install Python extension from the extension tab or from https://marketplace.visualstudio.com/items?itemName=ms-python.python
