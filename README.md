@@ -7,6 +7,11 @@
 - Remember to select "add to PATH" when installing 
 
 - Create Pytorch environment using the command:
+```
+conda create -n pytorch
+```
+
+- Then install the required packages:
 
 CPU only
 ```
