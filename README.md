@@ -29,3 +29,4 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
   - select a Python 3 interpreter by opening the **Command Palette** (Ctrl+Shift+P) or (F1)
   - type **Python: Select Interpreter**
   - select the Conda environment
+- Now you can code with Pytorch :)
