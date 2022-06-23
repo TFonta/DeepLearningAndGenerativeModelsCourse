@@ -8,8 +8,15 @@
 ```
 conda create -n pytorch
 ```
-
-- Then install the required packages:
+- To activate env:
+```
+conda activate pytorch
+```
+- To deactivate env:
+```
+conda deactivate
+```
+- With the 'pytorch' env activated install the required packages:
 
 CPU only
 ```
@@ -28,5 +35,5 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 - Setting up conda in VS code: 
   - select a Python 3 interpreter by opening the **Command Palette** (Ctrl+Shift+P) or (F1)
   - type **Python: Select Interpreter**
-  - select the Conda environment
+  - select the 'pytorch' Conda environment
 - Now you can code with Pytorch :)
