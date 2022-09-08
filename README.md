@@ -45,7 +45,7 @@ Jupyter-lab:
 ```
 pip install jupyterlab
 ```
-Usually if some package is missing it can be just installed with:
+Usually if some package is missing it can be installed with:
 ```
 pip install [PACKAGE_NAME]
 ```
