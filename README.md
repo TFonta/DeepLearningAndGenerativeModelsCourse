@@ -39,3 +39,13 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
   - type **Python: Select Interpreter**
   - select the 'pytorch' Conda environment
 - Now you can code with Pytorch :)
+
+### Install addional packages
+Jupyter-lab:
+```
+pip install jupyterlab
+```
+Usually if some package is missing it can be installed with:
+```
+pip install [PACKAGE_NAME]
+```
