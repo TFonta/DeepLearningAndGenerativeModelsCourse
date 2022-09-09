@@ -49,3 +49,6 @@ Usually if some package is missing it can be installed with:
 ```
 pip install [PACKAGE_NAME]
 ```
+
+### Honorable Mentions
+Some code borrowed from the excellent repo: https://atcold.github.io/pytorch-Deep-Learning/
