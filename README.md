@@ -31,10 +31,14 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 ```
 
 Alternatively, you can also install torch via pip
+CPU
+```
+pip3 install torch torchvision torchaudio
+```
+GPU
 ```
 pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
 ```
-
 ### Setting up VS code
 
 - Install VS code from https://code.visualstudio.com/
