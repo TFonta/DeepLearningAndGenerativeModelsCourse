@@ -40,7 +40,7 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
   - select the 'pytorch' Conda environment
 - Now you can code with Pytorch :)
 
-### Install addional packages
+### Install additional packages
 Jupyter-lab:
 ```
 pip install jupyterlab
