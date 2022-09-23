@@ -41,6 +41,9 @@ GPU
 ```
 pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
 ```
+### Enabling Conda on powershell
+
+Follow the instruction on this link: https://gist.github.com/martinsotir/2bd2e16332dff71e0fa5be3ed3468a6c
 
 ### Setting up VS code
 
@@ -51,6 +54,10 @@ pip install torch torchvision torchaudio --extra-index-url https://download.pyto
   - type **Python: Select Interpreter**
   - select the 'pytorch' Conda environment
 - Now you can code with Pytorch :)
+
+### Google Colab
+
+Alternatively you can also use Google Colab: https://www.marktechpost.com/2021/01/09/getting-started-with-pytorch-in-google-collab-with-free-gpu/
 
 ### Install additional packages
 Jupyter-lab:
