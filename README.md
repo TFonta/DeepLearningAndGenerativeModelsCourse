@@ -57,7 +57,7 @@ Follow the instruction on this link: https://gist.github.com/martinsotir/2bd2e16
 
 ### Google Colab
 
-Alternatively you can also use Google Colab: https://www.marktechpost.com/2021/01/09/getting-started-with-pytorch-in-google-collab-with-free-gpu/
+Alternatively, you can also use Google Colab: https://www.marktechpost.com/2021/01/09/getting-started-with-pytorch-in-google-collab-with-free-gpu/
 
 ### Install additional packages
 Jupyter-lab:
