@@ -48,8 +48,7 @@ echo  #OMP_NUM_THREADS : $OMP_NUM_THREADS
 
 module load miniconda3
 source "$CONDA_PREFIX/etc/profile.d/conda.sh"
-#conda activate pytorch-cuda-10.2
-conda activate pytorch_implab_tom
+conda activate pytorch-cuda-10.2
 
 python ./hpc_test/hpc_test.py --dataset_path /hpc/archive/T_2022_DLAGM/tomaso.fontanini/cifar10 \
 --checkpoint_path /hpc/group/T_2022_DLAGM/tomaso.fontanini/hpc_exp
