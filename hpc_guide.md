@@ -72,3 +72,22 @@ To cancel a job:
 ```
 scancel <jobID>
 ```
+
+### Create conda env in hpc
+If needed you can also create a custom conda environment in HPC.
+In order to do it, after loggin in in HPC, you will need to enter a node with gpus (in order to install gpu-enabled libraries):
+```
+ssh wn44
+```
+
+Then, you need to load miconda with the following commands:
+```
+module load miniconda3
+source "$CONDA_PREFIX/etc/profile.d/conda.sh"
+```
+And then you can just create your environment as usual:
+```
+conda create -n myenv python=3.9
+```
+and install the need packages using pip.
+(remember to update pip before installing packages using `pip install --upgrade pip`)
