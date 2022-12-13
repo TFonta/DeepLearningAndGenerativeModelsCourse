@@ -27,7 +27,7 @@ chmod 0600 ~/.ssh/authorized_keys
 
 ## Launch a script in hpc
 
-Once logged you will need to create a bash file to execute your code. An example can be seen below:
+Once logged you will need to create a bash file to launch the job that will execute your code. An example can be seen below:
 ```
 #!/bin/bash
 #SBATCH --partition=gpu
@@ -54,4 +54,21 @@ python ./hpc_test/hpc_test.py --dataset_path /hpc/archive/T_2022_DLAGM/tomaso.fo
 --checkpoint_path /hpc/group/T_2022_DLAGM/tomaso.fontanini/hpc_exp
 
 conda deactivate
+```
+To put your job in queue do:
+```
+sbatch <filename>.bash
+```
+In order to see the status of your job:
+```
+squeue
+```
+or
+```
+squeue --user=<name.surname>
+```
+
+To cancel a job:
+```
+scancel <jobID>
 ```
