@@ -24,13 +24,18 @@ def plot_data(X, y, d=0, auto=False, zoom=1):
     plt.axvline(0, ymin=_m, color=_c, lw=1, zorder=0)
     plt.axhline(0, xmin=_m, color=_c, lw=1, zorder=0)
 
-def plot_data_np(X, y, d=0, auto=False, zoom=1):       
-    plt.scatter(X[:, 0], X[:, 1], c=y, s=20, cmap=plt.cm.Spectral)
+def plot_data_np(X, y, d=0, auto=False, zoom=1, legend = False):    
+    if legend == True:
+        scatter = plt.scatter(X[:, 0], X[:, 1], c=y, s=20, cmap=plt.cm.Spectral)
+        plt.legend(*scatter.legend_elements(), title="Classes")
+    else:
+        plt.scatter(X[:, 0], X[:, 1], c=y, s=20, cmap=plt.cm.Spectral)
+        
     plt.axis('square')
     plt.axis(np.array((-1.1, 1.1, -1.1, 1.1)) * zoom)
     if auto is True: plt.axis('equal')
     plt.axis('off')
-
+        
     _m, _c = 0, '.15'
     plt.axvline(0, ymin=_m, color=_c, lw=1, zorder=0)
     plt.axhline(0, xmin=_m, color=_c, lw=1, zorder=0)    
