@@ -72,6 +72,10 @@ To cancel a job:
 ```
 scancel <jobID>
 ```
+To check the resources used by a job:
+```
+seff <jobID>
+```
 
 ### Create conda env in hpc
 If needed you can also create a custom conda environment in HPC.
