@@ -9,8 +9,8 @@
 
 
 #< Charge resources to account
-#SBATCH --reservation=hpc_t_2022_dlagm20221214    
-#SBATCH --account T_2022_dlagm
+#SBATCH --reservation=t_2023_dlagm_20231214    
+#SBATCH --account t_2023_dlagm
 
 echo $SLURM_JOB_NODELIST
 
@@ -20,7 +20,7 @@ module load miniconda3
 source "$CONDA_PREFIX/etc/profile.d/conda.sh"
 conda activate pytorch-cuda-11.1
 
-python ./hpc_test/hpc_test.py --dataset_path /hpc/archive/T_2022_DLAGM/tomaso.fontanini/cifar10 \
---checkpoint_path /hpc/group/T_2022_DLAGM/tomaso.fontanini/hpc_exp
+python ./hpc_test/hpc_test.py --dataset_path /hpc/archive/T_2023_DLAGM/tomaso.fontanini/cifar10 \
+--checkpoint_path /hpc/group/T_2023_DLAGM/tomaso.fontanini/hpc_exp
 
 conda deactivate
