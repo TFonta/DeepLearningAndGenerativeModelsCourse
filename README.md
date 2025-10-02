@@ -8,7 +8,7 @@
 - Remember to select "add to PATH" when installing 
 - Create Pytorch environment using the command:
 ```
-conda create -n pytorch
+conda create -n pytorch python=3.9
 ```
 - To activate env:
 ```
@@ -20,27 +20,27 @@ conda deactivate
 ```
 - With the 'pytorch' env activated install the required packages:
 
-CPU only
-```
-conda install pytorch torchvision torchaudio cpuonly -c pytorch
-```
-
-GPU
-```
-conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
-```
-
-Alternatively, you can also install torch via pip
+Pytorch: https://pytorch.org/get-started/locally/
 
 CPU
 ```
-pip3 install torch torchvision torchaudio
+pip install torch torchvision torchaudio
 ```
 
 GPU
+
+If you have a GPU check CUDA version in terminal with nvidia-smi
+
+Old version:
 ```
 pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
 ```
+
+New version
+```
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+```
+
 ### Enabling Conda on powershell
 
 Follow the instruction on this link: https://gist.github.com/martinsotir/2bd2e16332dff71e0fa5be3ed3468a6c
