@@ -41,6 +41,8 @@ New version
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
 ```
 
+For mac: https://developer.apple.com/metal/pytorch/
+
 ### Enabling Conda on powershell
 
 Follow the instruction on this link: https://gist.github.com/martinsotir/2bd2e16332dff71e0fa5be3ed3468a6c
