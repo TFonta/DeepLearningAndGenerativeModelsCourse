@@ -9,7 +9,7 @@
 
 
 #< Charge resources to account   
-#SBATCH --account t_2024_dlagm
+#SBATCH --account t_2025_dlagm
 
 echo $SLURM_JOB_NODELIST
 
@@ -19,7 +19,7 @@ module load miniconda3
 source "$CONDA_PREFIX/etc/profile.d/conda.sh"
 conda activate stylegan
 
-python ./hpc_test/hpc_test.py --dataset_path /hpc/archive/T_2023_DLAGM/tomaso.fontanini/cifar10 \
---checkpoint_path /hpc/group/T_2023_DLAGM/tomaso.fontanini/hpc_exp
+python ./hpc_test/hpc_test.py --dataset_path /hpc/archive/T_2025_DLAGM/tomaso.fontanini/cifar10 \
+--checkpoint_path /hpc/group/T_2025_DLAGM/tomaso.fontanini/hpc_exp
 
 conda deactivate
