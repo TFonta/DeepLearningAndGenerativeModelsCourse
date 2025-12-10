@@ -40,7 +40,7 @@ Once logged you will need to create a bash file to launch the job that will exec
 
 
 #< Charge resources to account 
-#SBATCH --account T_2024_dlagm
+#SBATCH --account T_2025_dlagm
 
 echo $SLURM_JOB_NODELIST
 
@@ -50,8 +50,8 @@ module load miniconda3
 source "$CONDA_PREFIX/etc/profile.d/conda.sh"
 conda activate pytorch
 
-python ./hpc_test/hpc_test.py --dataset_path /hpc/archive/T_2024_DLAGM/tomaso.fontanini/cifar10 \
---checkpoint_path /hpc/group/T_2024_DLAGM/tomaso.fontanini/hpc_exp
+python ./hpc_test/hpc_test.py --dataset_path /hpc/archive/T_2025_DLAGM/tomaso.fontanini/cifar10 \
+--checkpoint_path /hpc/group/T_2025_DLAGM/tomaso.fontanini/hpc_exp
 
 conda deactivate
 ```
