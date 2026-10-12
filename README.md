@@ -38,6 +38,13 @@ python -m pip install torch torchvision --index-url https://download.pytorch.org
 
 Check your GPU driver with `nvidia-smi`, then select the appropriate CUDA option on the [PyTorch installation page](https://pytorch.org/get-started/locally/) and run the suggested command.
 
+Example:
+
+```bash
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+```
+
+
 **Mac (Intel / Apple Silicon)**
 
 ```bash
@@ -86,8 +93,6 @@ Then restart PowerShell. You can also continue using Miniconda Prompt.
 - Open the Command Palette (`Ctrl+Shift+P` or `F1`), type **Python: Select Interpreter**, and select the `pytorch` Conda environment.
 - When opening a notebook (`.ipynb`), select the same environment as the notebook kernel.
 
-Now you can start with [ex1.ipynb](ex1.ipynb)!
-
 ### Google Colab
 
 Alternatively, you can use Google Colab: https://colab.research.google.com/
@@ -107,6 +112,10 @@ Usually, if some package is missing, it can be installed with:
 ```bash
 python -m pip install PACKAGE_NAME
 ```
+
+### Final Test
+
+Now you can start with [ex0.ipynb](ex0.ipynb)!
 
 ### Honorable Mentions
 
