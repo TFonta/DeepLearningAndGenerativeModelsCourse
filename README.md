@@ -2,74 +2,112 @@
 
 ## Setting up Pytorch environment
 
-### Create Anaconda Environment
+### Create Conda Environment
 
-- Download Miniconda from https://docs.conda.io/en/latest/miniconda.html
-- Remember to select "add to PATH" when installing 
-- Create Pytorch environment using the command:
-```
-conda create -n pytorch python=3.9
-```
-- To activate env:
-```
-conda activate pytorch
-```
-- To deactivate env:
-```
-conda deactivate
-```
-- With the 'pytorch' env activated install the required packages:
+- Download Miniconda from https://www.anaconda.com/download/success?reg=skipped-miniconda
+- On Windows, open **Miniconda Prompt** as administrator to run the commands below (no need to add Conda to PATH).
+- Create the Pytorch environment:
 
-Pytorch: https://pytorch.org/get-started/locally/
+  ```bash
+  conda create -n pytorch python=3.12
+  ```
 
-CPU
-```
-pip install torch torchvision torchaudio
-```
+- To activate the environment:
 
-GPU
+  ```bash
+  conda activate pytorch
+  ```
 
-If you have a GPU check CUDA version in terminal with nvidia-smi
+- To deactivate it:
 
-Old version:
-```
-pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
+  ```bash
+  conda deactivate
+  ```
+
+### Install Pytorch
+
+With the `pytorch` environment activated, install PyTorch. The official installation commands are available here: https://pytorch.org/get-started/locally/
+
+**CPU (Windows/Linux)**
+
+```bash
+python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 ```
 
-New version
+**NVIDIA GPU**
+
+Check your GPU driver with `nvidia-smi`, then select the appropriate CUDA option on the [PyTorch installation page](https://pytorch.org/get-started/locally/) and run the suggested command.
+
+**Mac (Intel / Apple Silicon)**
+
+```bash
+python -m pip install torch torchvision
 ```
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+
+For Apple Silicon GPU support, see https://developer.apple.com/metal/pytorch/
+
+A GPU is not required for the first exercises.
+
+### Check the installation
+
+Open Python in your terminal:
+
+```bash
+python
 ```
 
-For mac: https://developer.apple.com/metal/pytorch/
+Then run:
 
-### Enabling Conda on powershell
+```python
+import torch
 
-Follow the instruction on this link: https://gist.github.com/martinsotir/2bd2e16332dff71e0fa5be3ed3468a6c
+print(torch.__version__)
+print("CUDA:", torch.cuda.is_available()) # for Windows/Linux
+print("MPS:", torch.backends.mps.is_available()) # for Mac
+print(torch.rand(2, 3))
+```
 
-### Setting up VS code
+If the tensor is printed without errors, PyTorch is working. `False` for CUDA or MPS is normal if your computer does not support them.
 
-- Install VS code from https://code.visualstudio.com/
-- Install Python extension from the extension tab or from https://marketplace.visualstudio.com/items?itemName=ms-python.python
-- Setting up conda in VS code: 
-  - select a Python 3 interpreter by opening the **Command Palette** (Ctrl+Shift+P) or (F1)
-  - type **Python: Select Interpreter**
-  - select the 'pytorch' Conda environment
-- Now you can code with Pytorch :)
+### Enabling Conda on PowerShell
+
+If PowerShell does not recognize `conda`, open Miniconda Prompt and run:
+
+```bash
+conda init powershell
+```
+
+Then restart PowerShell. You can also continue using Miniconda Prompt.
+
+### Setting up VS Code
+
+- Install VS Code from https://code.visualstudio.com/
+- Install the **Python** and **Jupyter** extensions.
+- Open the Command Palette (`Ctrl+Shift+P` or `F1`), type **Python: Select Interpreter**, and select the `pytorch` Conda environment.
+- When opening a notebook (`.ipynb`), select the same environment as the notebook kernel.
+
+Now you can start with [ex1.ipynb](ex1.ipynb)!
 
 ### Google Colab
 
-Alternatively, you can also use Google Colab: https://www.marktechpost.com/2021/01/09/getting-started-with-pytorch-in-google-collab-with-free-gpu/
+Alternatively, you can use Google Colab: https://colab.research.google.com/
+
+To use a GPU, go to **Runtime > Change runtime type** and select a GPU if one is available.
 
 ### Install additional packages
-Jupyter-lab:
+
+With the environment activated:
+
+```bash
+python -m pip install jupyterlab ipykernel numpy matplotlib tqdm
 ```
-pip install jupyterlab
-```
-Usually if some package is missing it can be installed with:
-```
-pip install [PACKAGE_NAME]
+
+Usually, if some package is missing, it can be installed with:
+
+```bash
+python -m pip install PACKAGE_NAME
 ```
 
 ### Honorable Mentions
+
 Some code borrowed from the excellent repo: https://github.com/Atcold/NYU-DLSP20/tree/master
