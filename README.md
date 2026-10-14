@@ -1,4 +1,4 @@
-# Deep Learning And Generative Models Course
+# Deep Learning And Generative Models Course 2026/2027
 ## Download and update the course with Git
 
 First, [install Git](https://git-scm.com/downloads) if you don't have it. Open a terminal (e.g., **Git Bash** or **Miniconda Prompt** on Windows) in the folder where you want to save the course, then run:
