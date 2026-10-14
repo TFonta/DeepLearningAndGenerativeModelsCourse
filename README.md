@@ -1,4 +1,20 @@
 # Deep Learning And Generative Models Course
+## Download and update the course with Git
+
+First, [install Git](https://git-scm.com/downloads) if you don't have it. Open a terminal (e.g., **Git Bash** or **Miniconda Prompt** on Windows) in the folder where you want to save the course, then run:
+
+```bash
+git clone https://github.com/TFonta/DeepLearningAndGenerativeModelsCourse.git
+cd DeepLearningAndGenerativeModelsCourse
+```
+
+This downloads the course into a new folder. To get the latest materials later, open a terminal **inside that folder** and run:
+
+```bash
+git pull
+```
+
+You only need to **clone once**; use `git pull` for updates. If you've edited course files locally, Git may ask you to resolve conflicts, so it's a good idea to keep your own solutions in separate files.
 
 ## Setting up Pytorch environment
 
